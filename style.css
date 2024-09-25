@@ -103,8 +103,8 @@ nav ul li a:hover {
 }
 
 .images {
-    width: 35vw;
-    height: 35vh;
+    width: 320px;
+    height: 320px;
     border: 2px solid #fff;
     border-radius: 50%;
     overflow: hidden;
@@ -141,14 +141,13 @@ nav ul li a:hover {
 
     .content {
         display: flex;
-        flex-direction: column;
         align-items: center;
-        justify-content: center;
-        padding: 0;
+        justify-content: space-between;
+        padding: 1.2rem;
     }
 
     .text {
-        width: 100%;
+        width: 60%;
     }
 
     .text h1 {
@@ -163,13 +162,15 @@ nav ul li a:hover {
         width: 14rem;
         padding: 2rem;
         font-size: 2.2rem;
-        margin-top: 2rem;
+        margin: 2rem 0;
         border-radius: 12px;
     }
 
     .images {
+        align-self: flex-start;
         width: 400px;
         height: 400px;
+        margin: 2rem;
     }
 
     .projects {
