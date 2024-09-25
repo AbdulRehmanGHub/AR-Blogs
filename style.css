@@ -1,99 +1,261 @@
-*{
+* {
     margin: 0;
     padding: 0;
-    font-family: sans-serif;
+    box-sizing: border-box;
 }
 
-.main{
-    position: relative;
-    width: 100%;
-    height: 100vh;
+body {
+    font-family: roboto, sans-serif;
+    font-size: 62.5%;
     background: wheat;
-    position: relative;
+    cursor: default;
 }
 
-nav{
+.main {
+    padding: 0 20px;
+}
+
+nav {
     display: flex;
-    width: 84%;
-    margin: auto;
-    padding: 20px 0;
     align-items: center;
     justify-content: space-between;
+    padding: 10px 0;
 }
 
-.logo{
-    width: 100px;
-    cursor: pointer;
+nav h2 {
+    font-size: 2.2rem;
 }
 
 nav ul li {
     display: inline-block;
     list-style: none;
-    margin: 10px 20px;
+    margin: 0 .5rem;
 }
 
-nav ul li a{
+nav ul li a {
     text-decoration: none;
-    color: slateblue;
     font-weight: bold;
+    font-size: .8rem;
+    color: black;
 }
 
-nav ul li a:hover{
-    color: green;
-}
-
-.text{
-    margin-left: 8%;
-    margin-top: 5%;
-}
-
-.text h1{
-    font-size: 50px;
+nav ul li a:hover {
     color: darkslateblue;
 }
 
-span{
-    color: slateblue;
-    
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 4rem;
+    gap: 1rem;
+    min-height: 400px;
 }
 
-.text p{
-    color: grey;
-    line-height: 22px;
+.text {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
 }
 
-.text a{
+.text h1 {
+    font-size: 3.2rem;
+    color: darkslateblue;
+}
+
+.text p {
+    color: rgb(39, 39, 39);
+    font-size: 1.2rem;
+}
+
+.text a {
     background: darkslateblue;
-    padding: 10px 18px;
+    width: 6rem;
+    padding: 10px;
+    font-size: 1.2rem;
     text-decoration: none;
     font-weight: bold;
     color: white;
     display: inline-block;
-    margin: 30px 0;
-    border-radius: 5px;
+    margin-top: 2rem;
+    border-radius: 6px;
+}
+
+.text a:hover {
+    background: rgb(47, 40, 90);
 }
 
 
-h2{
-    margin-left: 8%;
-    margin-top: 5%;
+.projects {
+    display: flex;
+    flex-direction: column;
+    gap: .6rem;
+    padding: 0 4rem;
 }
 
-.projects{
-    
+.projects h2 {
+    font-size: 1.4rem;
 }
 
-.images{
-    width: 40%;
-    height: 60%;
-    position: absolute;
-    bottom: 15%;
-    right: 100px;
+.projects ul {
+    list-style: none;
+    font-size: .8rem;
 }
 
-.images img{
+.images {
+    width: 35vw;
+    height: 35vh;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.images img {
+    width: 100%;
     height: 100%;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
+}
+
+@media (min-width: 1600px) {
+    .main {
+        padding: 1rem;
+    }
+
+    nav {
+        gap: 1rem;
+        padding: 1rem 0;
+        width: 100%;
+        margin-bottom: 4rem;
+    }
+
+    nav h2 {
+        font-size: 7vw;
+    }
+
+    nav ul li {
+        margin: 0 1rem;
+    }
+
+    nav ul li a {
+        font-size: 2vw;
+    }
+
+    .content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+    }
+
+    .text {
+        width: 100%;
+    }
+
+    .text h1 {
+        font-size: 5vw;
+    }
+
+    .text p {
+        font-size: 2.6vw;
+    }
+
+    .text a {
+        width: 14rem;
+        padding: 2rem;
+        font-size: 2.2rem;
+        margin-top: 2rem;
+        border-radius: 12px;
+    }
+
+    .images {
+        width: 400px;
+        height: 400px;
+    }
+
+    .projects {
+        gap: .8rem;
+    }
+
+    .projects h2 {
+        font-size: 3vw;
+    }
+
+    .projects ul {
+        font-size: 2vw;
+    }
+}
+
+@media (max-width: 768px) {
+    .main {
+        padding: 6px;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: .6rem;
+        justify-content: center;
+        padding: 10px 0;
+        width: 100%;
+    }
+
+    nav h2 {
+        font-size: 10vw;
+    }
+
+    nav ul li {
+        margin: 0 .3rem;
+    }
+
+    nav ul li a {
+        font-size: 2.8vw;
+    }
+
+    .content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+    }
+
+    .text {
+        width: 100%;
+    }
+
+    .text h1 {
+        font-size: 2.2rem;
+    }
+
+    .text p {
+        font-size: .8rem;
+    }
+
+    .text a {
+        width: 5rem;
+        padding: 6px;
+        font-size: 1rem;
+        margin-top: 1.6rem;
+        border-radius: 4px;
+    }
+
+    .images {
+        width: 30vw;
+        height: 20vh;
+    }
+
+    .projects {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: .6rem;
+        text-align: center;
+    }
+
+    .projects h2 {
+        font-size: 1.4rem;
+    }
+
+    .projects ul {
+        font-size: .8rem;
+    }
 }
